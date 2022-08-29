@@ -173,7 +173,7 @@ class HolidayManager:
             if weather_dicts is not None:
                 weather_info = [{'date': datetime.strptime(day['datetime'], '%Y-%m-%d').date(), 'conditions': day['conditions']} for day in weather_dicts['days']]
             else: 
-                print("Sorry, weather data not available!")
+                print("\nSorry, weather data not available!\n")
         for holiday in view_list:
             display_string = f'{holiday.name} ({holiday.date})'
             if confirm_view_weather and weather_dicts is not None:
